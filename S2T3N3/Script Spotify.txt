@@ -1,0 +1,293 @@
+db.createCollection('usuarix', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'usuarix',
+      required: ['usuarix_id', 'email', 'password', 'nom', 'naixement', 'sexe', 'pais', 'codi_postal'],
+      properties: {
+        usuarix_id: {
+          bsonType: 'objectId'
+        },
+        premium: {
+          enum:
+        },
+        email: {
+          bsonType: 'string'
+        },
+        password: {
+          bsonType: 'string'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        naixement: {
+          bsonType: 'date'
+        },
+        sexe: {
+          enum:
+        },
+        pais: {
+          bsonType: 'string'
+        },
+        codi_postal: {
+          bsonType: 'int'
+        }
+      }
+    }
+  }
+});
+db.createCollection('subscripcio', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'subscripcio',
+      required: ['subscripcio_id', 'data_inici', 'data_fi', 'pagament'],
+      properties: {
+        subscripcio_id: {
+          bsonType: 'objectId'
+        },
+        data_inici: {
+          bsonType: 'date'
+        },
+        data_fi: {
+          bsonType: 'date'
+        },
+        pagament: {
+          enum:
+        }
+      }
+    }
+  }
+});
+db.createCollection('playlist', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'playlist',
+      required: ['playlist_id', 'titol', 'quantitat', 'data_creada'],
+      properties: {
+        playlist_id: {
+          bsonType: 'objectId'
+        },
+        titol: {
+          bsonType: 'string'
+        },
+        quantitat: {
+          bsonType: 'int'
+        },
+        data_creada: {
+          bsonType: 'timestamp'
+        },
+        eliminada: {
+          enum:
+        },
+        data_eliminacio: {
+          bsonType: 'timestamp'
+        }
+      }
+    }
+  }
+});
+db.createCollection('targeta', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'targeta',
+      required: ['targeta_id', 'numero_targeta', 'any_caducitat', 'mes_caducitat', 'codi_seguretat'],
+      properties: {
+        targeta_id: {
+          bsonType: 'objectId'
+        },
+        numero_targeta: {
+          bsonType: 'int'
+        },
+        any_caducitat: {
+          bsonType: 'int'
+        },
+        mes_caducitat: {
+          bsonType: 'int'
+        },
+        codi_seguretat: {
+          bsonType: 'int'
+        }
+      }
+    }
+  }
+});
+db.createCollection('afegir', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'afegir',
+      required: ['afegir_id', 'usuarix', 'data_afegiment'],
+      properties: {
+        afegir_id: {
+          bsonType: 'objectId'
+        },
+        usuarix: {
+          bsonType: 'string'
+        },
+        data_afegiment: {
+          bsonType: 'timestamp'
+        }
+      }
+    }
+  }
+});
+db.createCollection('paypal', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'paypal',
+      required: ['paypal_id', 'nom'],
+      properties: {
+        paypal_id: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('pagaments', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'pagaments',
+      required: ['pagaments_id', 'data', 'total'],
+      properties: {
+        pagaments_id: {
+          bsonType: 'objectId'
+        },
+        data: {
+          bsonType: 'date'
+        },
+        total: {
+          bsonType: 'double'
+        }
+      }
+    }
+  }
+});
+db.createCollection('favorits', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'favorits',
+      required: ['favorits_id'],
+      properties: {
+        favorits_id: {
+          bsonType: 'objectId'
+        },
+        canco: {
+          bsonType: 'string'
+        },
+        artista: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('artista', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'artista',
+      required: ['artista_id', 'nom', 'imatge'],
+      properties: {
+        artista_id: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        imatge: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('llista_seguiment', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'llista_seguiment',
+      required: ['llista_seguiment_id'],
+      properties: {
+        llista_seguiment_id: {
+          bsonType: 'objectId'
+        },
+        artistes: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('album', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'album',
+      required: ['album_id', 'titol', 'any_publicacio', 'portada'],
+      properties: {
+        album_id: {
+          bsonType: 'objectId'
+        },
+        titol: {
+          bsonType: 'string'
+        },
+        any_publicacio: {
+          bsonType: 'date'
+        },
+        portada: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('artista_has_artista', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'artista_has_artista',
+      required: ['artista_has_artista_id', 'tipus_de_musica'],
+      properties: {
+        artista_has_artista_id: {
+          bsonType: 'objectId'
+        },
+        tipus_de_musica: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('canco', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'canco',
+      required: ['canco_id', 'titol', 'durada', 'reproduccions'],
+      properties: {
+        canco_id: {
+          bsonType: 'objectId'
+        },
+        titol: {
+          bsonType: 'string'
+        },
+        durada: {
+          bsonType: 'timestamp'
+        },
+        reproduccions: {
+          bsonType: 'double'
+        }
+      }
+    }
+  }
+});

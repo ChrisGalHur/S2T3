@@ -1,0 +1,218 @@
+db.createCollection('client', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'client',
+      required: ['client_id', 'comanda', 'nom', 'cognoms', 'direccio', 'telefon', 'provincia', 'localitat'],
+      properties: {
+        client_id: {
+          bsonType: 'objectId'
+        },
+        comanda: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        cognoms: {
+          bsonType: 'string'
+        },
+        direccio: {
+          bsonType: 'string'
+        },
+        telefon: {
+          bsonType: 'int'
+        },
+        provincia: {
+          bsonType: 'array',
+          items: {
+            bsonType: 'string'
+          }
+        },
+        localitat: {
+          bsonType: 'array',
+          items: {
+            bsonType: 'string'
+          }
+        }
+      }
+    }
+  }
+});
+db.createCollection('comanda', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'comanda',
+      required: ['comanda_id', 'pizza', 'beguda', 'hamburguesa', 'datahora', 'tipus', 'cantpizza', 'canthamburguesa', 'cantbeguda'],
+      properties: {
+        comanda_id: {
+          bsonType: 'objectId'
+        },
+        pizza: {
+          bsonType: 'objectId'
+        },
+        beguda: {
+          bsonType: 'objectId'
+        },
+        hamburguesa: {
+          bsonType: 'objectId'
+        },
+        datahora: {
+          bsonType: 'date'
+        },
+        tipus: {
+          enum:
+        },
+        cantpizza: {
+          bsonType: 'int'
+        },
+        canthamburguesa: {
+          bsonType: 'int'
+        },
+        cantbeguda: {
+          bsonType: 'int'
+        }
+      }
+    }
+  }
+});
+db.createCollection('botiga', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'botiga',
+      required: ['botiga_id', 'empleat', 'direccio', 'codi_postal', 'comanda'],
+      properties: {
+        botiga_id: {
+          bsonType: 'objectId'
+        },
+        empleat: {
+          bsonType: 'objectId'
+        },
+        direccio: {
+          bsonType: 'string'
+        },
+        codi_postal: {
+          bsonType: 'int'
+        },
+        comanda: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});
+db.createCollection('empleat', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'empleat',
+      required: ['empleat_id', 'nom', 'cognoms', 'nif', 'telefon', 'puesto'],
+      properties: {
+        empleat_id: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        cognoms: {
+          bsonType: 'string'
+        },
+        nif: {
+          bsonType: 'string'
+        },
+        telefon: {
+          bsonType: 'int'
+        },
+        puesto: {
+          enum:
+        }
+      }
+    }
+  }
+});
+db.createCollection('hamburguesa', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'hamburguesa',
+      required: ['hamburguesa_id', 'nom', 'descripcio', 'imatge', 'preu'],
+      properties: {
+        hamburguesa_id: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        descripcio: {
+          bsonType: 'string'
+        },
+        imatge: {
+          bsonType: 'string'
+        },
+        preu: {
+          bsonType: 'decimal'
+        }
+      }
+    }
+  }
+});
+db.createCollection('beguda', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'beguda',
+      required: ['beguda_id', 'nom', 'descripcio', 'imatge', 'preu'],
+      properties: {
+        beguda_id: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        descripcio: {
+          bsonType: 'string'
+        },
+        imatge: {
+          bsonType: 'string'
+        },
+        preu: {
+          bsonType: 'decimal'
+        }
+      }
+    }
+  }
+});
+db.createCollection('pizza', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'pizza',
+      required: ['pizza_id', 'nom', 'descripcio', 'imatge', 'preu', 'categoria'],
+      properties: {
+        pizza_id: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        descripcio: {
+          bsonType: 'string'
+        },
+        imatge: {
+          bsonType: 'string'
+        },
+        preu: {
+          bsonType: 'decimal'
+        },
+        categoria: {
+          bsonType: 'array',
+          items: {
+            bsonType: 'string'
+          }
+        }
+      }
+    }
+  }
+});
