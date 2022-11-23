@@ -19,50 +19,9 @@
 					"data": ""
 				},
 				{
-					"id": "4094a737-4a4e-4eec-b4ae-0ab9cac8ed35",
-					"name": "subscripcio",
-					"datatype": "objectId",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"fk": true,
-					"ref": "subscripcio"
-				},
-				{
-					"id": "d985668a-6bb8-4237-a562-c8141d662dfc",
-					"name": "targeta",
-					"datatype": "objectId",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"fk": true,
-					"ref": "targeta",
-					"list": true
-				},
-				{
-					"id": "05259bb6-8902-48a1-9381-c9b1105c0e17",
-					"name": "pagaments",
-					"datatype": "objectId",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"fk": true,
-					"ref": "pagaments",
-					"list": true
-				},
-				{
 					"id": "f4f2d4e7-9334-4b8c-83f6-e072110489b9",
-					"name": "premium",
-					"datatype": "enum",
+					"name": "subscripcio",
+					"datatype": "f5e6df51-32de-4f2a-8410-3551062ee7cb",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -170,12 +129,53 @@
 					"list": false,
 					"enum": "",
 					"validate": ""
+				},
+				{
+					"id": "7638f347-ea37-4d2a-9c57-945cf3351b20",
+					"name": "pagaments",
+					"datatype": "e2afff7b-0f71-4f66-b6ae-8c7f7495e698",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "d0baa09b-d6c2-40d0-a198-99f4535f72ed",
+					"name": "targeta",
+					"datatype": "e7e168b3-ca1e-4b21-8cd2-04f9627db3a7",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "029285e0-e50d-491a-9262-1a30711630a4",
+					"name": "paypal",
+					"datatype": "2c395e45-029e-4a27-a0ef-02c2c6f2330f",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
 				}
 			],
 			"relations": [
-				"29406f69-9a92-415a-9ab6-a2f97d324e91",
-				"30f4feb3-21db-4543-88d6-2a7d73b85297",
-				"d8755ea0-e6d3-473c-a5ce-fc88a65f5102"
+				"14d73bd2-39c9-4ccc-935b-3ccfd9332da0",
+				"5fef4e3a-8d75-4122-a8eb-10f8101f6dba"
 			],
 			"lines": [],
 			"keys": [
@@ -188,94 +188,6 @@
 						{
 							"id": "f2fd38ed-4a5d-4e70-ae5f-862c98bf11af",
 							"colid": "2a9541d6-04fe-43ce-8c18-0477da698ee4"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"validationLevel": "na",
-			"validationAction": "na",
-			"collation": "",
-			"others": ""
-		},
-		"482bb142-c424-42a5-9d6d-ed2727eedc9c": {
-			"id": "482bb142-c424-42a5-9d6d-ed2727eedc9c",
-			"visible": true,
-			"name": "subscripcio",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "66b2afa0-4383-4665-b2bb-70002cb2a2c0",
-					"name": "subscripcio_id",
-					"datatype": "objectId",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": ""
-				},
-				{
-					"id": "bba3d1c6-1bdf-47c2-a130-17a3d12d5061",
-					"name": "data_inici",
-					"datatype": "date",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				},
-				{
-					"id": "94c5cd93-12fa-47f5-a143-2aeee75343e8",
-					"name": "data_fi",
-					"datatype": "date",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				},
-				{
-					"id": "d4f9366c-a074-4c55-a7b7-06305b5faf29",
-					"name": "pagament",
-					"datatype": "enum",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				}
-			],
-			"relations": [
-				"29406f69-9a92-415a-9ab6-a2f97d324e91"
-			],
-			"lines": [],
-			"keys": [
-				{
-					"id": "1e27f185-d99f-4a08-aaa2-2688f52959e1",
-					"name": "Primary key",
-					"isPk": true,
-					"using": "na",
-					"cols": [
-						{
-							"id": "350b9160-c457-4277-9cef-0f3ef37337a5",
-							"colid": "66b2afa0-4383-4665-b2bb-70002cb2a2c0"
 						}
 					]
 				}
@@ -306,6 +218,18 @@
 					"comment": "",
 					"defaultvalue": "",
 					"data": ""
+				},
+				{
+					"id": "8f3b2e36-ef6a-42e9-9667-cbb960c1a02b",
+					"name": "usuarix",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
 				},
 				{
 					"id": "56d29596-f25b-4a8c-8e1d-9b332b8c939d",
@@ -352,7 +276,7 @@
 				{
 					"id": "07e053a1-42ea-480b-8f54-294870ea9432",
 					"name": "eliminada",
-					"datatype": "enum",
+					"datatype": "61a455d1-d631-4616-8992-60063adda54f",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -364,9 +288,65 @@
 					"validate": ""
 				},
 				{
-					"id": "f6e03486-eafa-4b5a-993b-c51c03c2e0d6",
-					"name": "data_eliminacio",
-					"datatype": "timestamp",
+					"id": "15a35a36-0738-4e5d-ab99-af42e8066cca",
+					"name": "canco_afegida",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "eafc3608-dcb0-4cf8-9133-3f476937411e",
+					"name": "data_afegiment_canco",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "03ec9404-5832-4f7a-9543-734c7e95b46f",
+					"name": "artistes_seguiment",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "4cd89880-8539-465d-aa00-9ae533b93335",
+					"name": "favorit_canco",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "eafdbedf-94c1-449a-a309-bf7b8b37ff53",
+					"name": "favorit_artista",
+					"datatype": "string",
 					"param": "",
 					"pk": false,
 					"nn": false,
@@ -378,7 +358,12 @@
 					"validate": ""
 				}
 			],
-			"relations": [],
+			"relations": [
+				"308eab94-8442-4f46-ba81-59251464ec36",
+				"75f451ed-9133-495c-9037-2370a6df2556",
+				"2678bb2a-bf9d-4c44-86d7-54c5659f17f2",
+				"14d73bd2-39c9-4ccc-935b-3ccfd9332da0"
+			],
 			"lines": [],
 			"keys": [
 				{
@@ -390,384 +375,6 @@
 						{
 							"id": "8305bc76-e4d0-4a2a-9faa-b672b08519e0",
 							"colid": "5d63dfc1-c53d-4fea-a9cd-17273a70504c"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"validationLevel": "na",
-			"validationAction": "na",
-			"collation": "",
-			"others": ""
-		},
-		"a6312367-705d-4a47-b9bc-ab49e276bc6d": {
-			"id": "a6312367-705d-4a47-b9bc-ab49e276bc6d",
-			"visible": true,
-			"name": "targeta",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "db195b1b-ee01-4472-92e5-8ed95913e7b6",
-					"name": "targeta_id",
-					"datatype": "objectId",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": ""
-				},
-				{
-					"id": "76d4cd32-696a-4414-90fc-a760e5dc0c57",
-					"name": "numero_targeta",
-					"datatype": "int",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				},
-				{
-					"id": "d68205aa-0ad0-4184-b144-b22d2df59270",
-					"name": "any_caducitat",
-					"datatype": "int",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				},
-				{
-					"id": "644e9f75-c1ed-4b66-a5a7-f6d24510bab9",
-					"name": "mes_caducitat",
-					"datatype": "int",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				},
-				{
-					"id": "8ff47a07-7460-4631-b6f1-1946cb07ca58",
-					"name": "codi_seguretat",
-					"datatype": "int",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				}
-			],
-			"relations": [
-				"30f4feb3-21db-4543-88d6-2a7d73b85297"
-			],
-			"lines": [],
-			"keys": [
-				{
-					"id": "687caf12-6a79-4752-8ed5-6dce8d990197",
-					"name": "Primary key",
-					"isPk": true,
-					"using": "na",
-					"cols": [
-						{
-							"id": "5abb3af4-556d-477b-bd9e-2e0288718d2b",
-							"colid": "db195b1b-ee01-4472-92e5-8ed95913e7b6"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"validationLevel": "na",
-			"validationAction": "na",
-			"collation": "",
-			"others": ""
-		},
-		"7f44d17a-1ebb-4e49-bc6e-c9b9d12dcc64": {
-			"id": "7f44d17a-1ebb-4e49-bc6e-c9b9d12dcc64",
-			"visible": true,
-			"name": "afegir",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "868e6b94-4f1a-4108-a6f2-54a6f5005d6b",
-					"name": "afegir_id",
-					"datatype": "objectId",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": ""
-				},
-				{
-					"id": "977e7268-72dd-46ca-8e45-1c23a69b4be3",
-					"name": "usuarix",
-					"datatype": "string",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				},
-				{
-					"id": "cdbdcfad-e1cc-41ee-8336-cf8753663b45",
-					"name": "data_afegiment",
-					"datatype": "timestamp",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				}
-			],
-			"relations": [],
-			"lines": [],
-			"keys": [
-				{
-					"id": "436b4830-f00b-4b1b-8e22-1b02851f5f4c",
-					"name": "Primary key",
-					"isPk": true,
-					"using": "na",
-					"cols": [
-						{
-							"id": "30acf506-6e4e-4943-8190-d162a9aeb1d4",
-							"colid": "868e6b94-4f1a-4108-a6f2-54a6f5005d6b"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"validationLevel": "na",
-			"validationAction": "na",
-			"collation": "",
-			"others": ""
-		},
-		"97f8a67d-cfa0-4594-86d3-41e6bcbd387a": {
-			"id": "97f8a67d-cfa0-4594-86d3-41e6bcbd387a",
-			"visible": true,
-			"name": "paypal",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "ec2f35aa-a8af-4b54-9537-47ff1ed83049",
-					"name": "paypal_id",
-					"datatype": "objectId",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": ""
-				},
-				{
-					"id": "0218a99a-c427-47a3-a7d6-2e831fe32bd9",
-					"name": "nom",
-					"datatype": "string",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				}
-			],
-			"relations": [],
-			"lines": [],
-			"keys": [
-				{
-					"id": "60e71c75-9c7d-4fd5-8f4b-900e3f8df1d9",
-					"name": "Primary key",
-					"isPk": true,
-					"using": "na",
-					"cols": [
-						{
-							"id": "34b53ca5-c319-4895-a867-826cded7b29f",
-							"colid": "ec2f35aa-a8af-4b54-9537-47ff1ed83049"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"validationLevel": "na",
-			"validationAction": "na",
-			"collation": "",
-			"others": ""
-		},
-		"947e0537-afc1-4ce5-9b4b-3ab2efa52990": {
-			"id": "947e0537-afc1-4ce5-9b4b-3ab2efa52990",
-			"visible": true,
-			"name": "pagaments",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "5a078ee4-e6f5-4893-8fe3-c19cf722e691",
-					"name": "pagaments_id",
-					"datatype": "objectId",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": ""
-				},
-				{
-					"id": "7bda41ff-431b-446a-b70e-79dd133e61e3",
-					"name": "data",
-					"datatype": "date",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				},
-				{
-					"id": "354c1f49-0650-42ca-920e-ba70294344a3",
-					"name": "total",
-					"datatype": "double",
-					"param": "",
-					"pk": false,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				}
-			],
-			"relations": [
-				"d8755ea0-e6d3-473c-a5ce-fc88a65f5102"
-			],
-			"lines": [],
-			"keys": [
-				{
-					"id": "46c55d51-bcc5-441c-ba3b-33fc3de8e0ee",
-					"name": "Primary key",
-					"isPk": true,
-					"using": "na",
-					"cols": [
-						{
-							"id": "3411bb35-4ad5-4197-b333-b6f4ec35bd4a",
-							"colid": "5a078ee4-e6f5-4893-8fe3-c19cf722e691"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"validationLevel": "na",
-			"validationAction": "na",
-			"collation": "",
-			"others": ""
-		},
-		"8f20a639-e9ad-4193-a346-179774d79e2e": {
-			"id": "8f20a639-e9ad-4193-a346-179774d79e2e",
-			"visible": true,
-			"name": "favorits",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005",
-					"name": "favorits_id",
-					"datatype": "objectId",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": ""
-				},
-				{
-					"id": "1dda0a9e-1319-4bc6-9a59-f19f653b7e16",
-					"name": "canco",
-					"datatype": "string",
-					"param": "",
-					"pk": false,
-					"nn": false,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				},
-				{
-					"id": "153694bd-e486-40b8-bc13-e7f8520f8c38",
-					"name": "artista",
-					"datatype": "string",
-					"param": "",
-					"pk": false,
-					"nn": false,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				}
-			],
-			"relations": [],
-			"lines": [],
-			"keys": [
-				{
-					"id": "8d8a0b19-4bb7-4936-9a92-beef3d2d8882",
-					"name": "Primary key",
-					"isPk": true,
-					"using": "na",
-					"cols": [
-						{
-							"id": "2627bfa6-027d-4452-b088-00cc820cc2fd",
-							"colid": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005"
 						}
 					]
 				}
@@ -826,71 +433,56 @@
 					"list": false,
 					"enum": "",
 					"validate": ""
+				},
+				{
+					"id": "596b5059-6057-4dbd-8a42-cdaba46fd767",
+					"name": "tipus_musica",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": true,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "4c6df043-2a35-4b13-bd9c-c66a0ad94ed3",
+					"name": "playlist",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
+				},
+				{
+					"id": "e4d3d6e2-c0de-40a7-b2e9-4f68e783f990",
+					"name": "artista",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
 				}
 			],
-			"relations": [],
+			"relations": [
+				"bb456451-e999-4b41-82d7-e801ba844411",
+				"2678bb2a-bf9d-4c44-86d7-54c5659f17f2",
+				"a72f5270-bc55-476c-8596-4ddc3f43c5a5",
+				"defadefb-aa5c-460f-afce-65d27cfe9cb0"
+			],
 			"lines": [],
 			"keys": [
 				{
 					"id": "77b202ef-23df-4701-a6bd-90fc95804995",
-					"name": "Primary key",
-					"isPk": true,
-					"using": "na",
-					"cols": [
-						{
-							"id": "2627bfa6-027d-4452-b088-00cc820cc2fd",
-							"colid": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"validationLevel": "na",
-			"validationAction": "na",
-			"collation": "",
-			"others": ""
-		},
-		"83d29f88-f08a-475b-92e5-4884127bbf1c": {
-			"id": "83d29f88-f08a-475b-92e5-4884127bbf1c",
-			"visible": true,
-			"name": "llista_seguiment",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005",
-					"name": "llista_seguiment_id",
-					"datatype": "objectId",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": ""
-				},
-				{
-					"id": "87ce71c7-7d85-462d-9435-3381dbcdf6e8",
-					"name": "artistes",
-					"datatype": "string",
-					"param": "",
-					"pk": false,
-					"nn": false,
-					"comment": "",
-					"defaultvalue": "",
-					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
-				}
-			],
-			"relations": [],
-			"lines": [],
-			"keys": [
-				{
-					"id": "09248bd3-1316-4bc8-92aa-e144983d25ef",
 					"name": "Primary key",
 					"isPk": true,
 					"using": "na",
@@ -918,6 +510,18 @@
 			"desc": "",
 			"estimatedSize": "",
 			"cols": [
+				{
+					"id": "22003e7f-6f60-4389-b6db-b0b46d168914",
+					"name": "artista",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
+				},
 				{
 					"id": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005",
 					"name": "album_id",
@@ -970,71 +574,29 @@
 					"list": false,
 					"enum": "",
 					"validate": ""
-				}
-			],
-			"relations": [],
-			"lines": [],
-			"keys": [
-				{
-					"id": "16b5a4ec-d3a8-4f17-bc58-af9b57960160",
-					"name": "Primary key",
-					"isPk": true,
-					"using": "na",
-					"cols": [
-						{
-							"id": "2627bfa6-027d-4452-b088-00cc820cc2fd",
-							"colid": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005"
-						}
-					]
-				}
-			],
-			"indexes": [],
-			"embeddable": false,
-			"generate": true,
-			"generateCustomCode": true,
-			"validationLevel": "na",
-			"validationAction": "na",
-			"collation": "",
-			"others": ""
-		},
-		"56131caf-4dd3-4e7f-bf92-95c483424338": {
-			"id": "56131caf-4dd3-4e7f-bf92-95c483424338",
-			"visible": true,
-			"name": "artista_has_artista",
-			"desc": "",
-			"estimatedSize": "",
-			"cols": [
-				{
-					"id": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005",
-					"name": "artista_has_artista_id",
-					"datatype": "objectId",
-					"param": "",
-					"pk": true,
-					"nn": true,
-					"comment": "",
-					"defaultvalue": "",
-					"data": ""
 				},
 				{
-					"id": "c7d25a88-17b8-43a5-9153-9f38bae76e2d",
-					"name": "tipus_de_musica",
-					"datatype": "string",
+					"id": "6ecb55a9-2ace-44df-802a-d75bcdedd839",
+					"name": "playlist",
+					"datatype": "objectId",
 					"param": "",
 					"pk": false,
 					"nn": true,
 					"comment": "",
 					"defaultvalue": "",
 					"data": "",
-					"list": false,
-					"enum": "",
-					"validate": ""
+					"fk": true
 				}
 			],
-			"relations": [],
+			"relations": [
+				"bb456451-e999-4b41-82d7-e801ba844411",
+				"1396f49b-d4cd-4883-84c6-2fcf0d3a602f",
+				"75f451ed-9133-495c-9037-2370a6df2556"
+			],
 			"lines": [],
 			"keys": [
 				{
-					"id": "1e417361-cf8f-4856-8d33-bef860962782",
+					"id": "16b5a4ec-d3a8-4f17-bc58-af9b57960160",
 					"name": "Primary key",
 					"isPk": true,
 					"using": "na",
@@ -1072,6 +634,18 @@
 					"comment": "",
 					"defaultvalue": "",
 					"data": ""
+				},
+				{
+					"id": "4d5fcc93-9d25-4be1-9df9-b7a7d9f2668e",
+					"name": "album",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
 				},
 				{
 					"id": "e4d67572-6863-40e7-84d8-60b5ec1df39a",
@@ -1114,9 +688,24 @@
 					"list": false,
 					"enum": "",
 					"validate": ""
+				},
+				{
+					"id": "bba3f62b-da8d-44e1-ab1d-595fc5e6d23c",
+					"name": "playlist",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
 				}
 			],
-			"relations": [],
+			"relations": [
+				"1396f49b-d4cd-4883-84c6-2fcf0d3a602f",
+				"308eab94-8442-4f46-ba81-59251464ec36"
+			],
 			"lines": [],
 			"keys": [
 				{
@@ -1140,79 +729,630 @@
 			"validationAction": "na",
 			"collation": "",
 			"others": ""
+		},
+		"e2afff7b-0f71-4f66-b6ae-8c7f7495e698": {
+			"id": "e2afff7b-0f71-4f66-b6ae-8c7f7495e698",
+			"visible": false,
+			"name": "object",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "563bb281-b564-487f-90bf-eb2cb0b4a693",
+					"name": "pagaments_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "0a241318-17eb-47b1-b282-cc042215704c",
+					"name": "data",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "cd9cea0a-023b-4fe3-86d5-6b16e364ce73",
+					"name": "total",
+					"datatype": "double",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "d2c9cd0b-185d-4dd0-93dd-f8d7fc56c44d",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"f5e6df51-32de-4f2a-8410-3551062ee7cb": {
+			"id": "f5e6df51-32de-4f2a-8410-3551062ee7cb",
+			"visible": false,
+			"name": "object",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "7b06c519-0c46-4f83-8832-736097f66224",
+					"name": "subscripcio_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "d4f0a4f3-b507-441f-89aa-6fec16a8d4f3",
+					"name": "data_inici",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "f67130af-90e6-4f50-ab10-d15761baf5c6",
+					"name": "data_renovacio",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "87a003ca-3fe4-486a-8345-3d71ae3839db",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"e7e168b3-ca1e-4b21-8cd2-04f9627db3a7": {
+			"id": "e7e168b3-ca1e-4b21-8cd2-04f9627db3a7",
+			"visible": false,
+			"name": "object",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "ca26c640-2b5e-498c-9760-61b8526b2f78",
+					"name": "targeta_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "33b6d5c4-1ceb-4eb0-bd9d-fe254cc14e86",
+					"name": "numero_targeta",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "10824668-376d-4759-8919-feeb143836fa",
+					"name": "any_caducitat",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "7c2922d8-b547-457f-85ff-740722c07fe1",
+					"name": "mes_caducitat",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "010c4811-c540-4954-9e2d-04581aa6e49a",
+					"name": "codi_seguretat",
+					"datatype": "int",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "08a77ac8-4c89-4a1c-a654-1e2238299ba7",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"2c395e45-029e-4a27-a0ef-02c2c6f2330f": {
+			"id": "2c395e45-029e-4a27-a0ef-02c2c6f2330f",
+			"visible": false,
+			"name": "object",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "60c2ec44-65f2-458d-92de-3dea0b842da0",
+					"name": "paypal_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "0662937a-760d-43e5-8c16-189a5b654fcf",
+					"name": "nom_paypal",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "fa6e9a67-5e79-47a6-ba79-0944699e2c89",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"61a455d1-d631-4616-8992-60063adda54f": {
+			"id": "61a455d1-d631-4616-8992-60063adda54f",
+			"visible": false,
+			"name": "object",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "c4d9bf77-59c4-44b9-a35a-d1bfd166d6e7",
+					"name": "estat",
+					"datatype": "bool",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				},
+				{
+					"id": "eb1fa07c-5637-4d08-93e3-7868f8979fcf",
+					"name": "data_eliminacio",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false,
+					"enum": "",
+					"validate": ""
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "2ce75913-68b7-4d7d-ae7c-a61828c790cb",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"f9339283-e90d-4c0d-b4ed-595395787f85": {
+			"id": "f9339283-e90d-4c0d-b4ed-595395787f85",
+			"visible": true,
+			"name": "favorits",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "39046008-d5ce-4e4a-9eb3-1ad2ff46c36f",
+					"name": "favorits_id",
+					"datatype": "objectId",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "16e241b6-702c-4ebc-acac-656c69e823e8",
+					"name": "usuarix",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
+				},
+				{
+					"id": "12d87b7a-5a05-4bc9-9152-029e125d7f92",
+					"name": "artista",
+					"datatype": "objectId",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
+				}
+			],
+			"relations": [
+				"5fef4e3a-8d75-4122-a8eb-10f8101f6dba",
+				"defadefb-aa5c-460f-afce-65d27cfe9cb0"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "2ba955a2-a5df-44f3-8cd7-5219f303582a",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "cf5eff83-ad10-4954-a494-c7347298e2e6",
+							"colid": "39046008-d5ce-4e4a-9eb3-1ad2ff46c36f"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"validationLevel": "na",
+			"validationAction": "na",
+			"collation": "",
+			"others": ""
 		}
 	},
 	"relations": {
-		"29406f69-9a92-415a-9ab6-a2f97d324e91": {
-			"id": "29406f69-9a92-415a-9ab6-a2f97d324e91",
+		"bb456451-e999-4b41-82d7-e801ba844411": {
+			"id": "bb456451-e999-4b41-82d7-e801ba844411",
 			"visible": true,
-			"name": "subscripcio_usuarix",
+			"name": "artista_album",
 			"desc": "",
 			"type": "identifying",
-			"parent_key": "1e27f185-d99f-4a08-aaa2-2688f52959e1",
-			"parent": "482bb142-c424-42a5-9d6d-ed2727eedc9c",
-			"child": "63161e56-4fe1-4a96-a5e9-a6b10015f4db",
+			"parent_key": "77b202ef-23df-4701-a6bd-90fc95804995",
+			"parent": "5980d630-c02c-49c2-acca-6b061e3a66fb",
+			"child": "7921f722-c86d-451e-9df3-60900ad0e8c8",
 			"c_mp": "true",
 			"c_mch": "true",
-			"c_p": "many",
-			"c_ch": "one",
+			"c_p": "one",
+			"c_ch": "many",
 			"c_cp": "",
 			"c_cch": "",
 			"cols": [
 				{
-					"id": "60919643-7e4f-41b8-b200-0a40e2714436",
-					"parentcol": "66b2afa0-4383-4665-b2bb-70002cb2a2c0",
-					"childcol": "4094a737-4a4e-4eec-b4ae-0ab9cac8ed35"
+					"id": "67051448-c8dd-4fe6-9cde-bc6381446bf1",
+					"parentcol": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005",
+					"childcol": "22003e7f-6f60-4389-b6db-b0b46d168914"
 				}
 			],
 			"generate": true,
 			"generateCustomCode": true
 		},
-		"30f4feb3-21db-4543-88d6-2a7d73b85297": {
-			"id": "30f4feb3-21db-4543-88d6-2a7d73b85297",
+		"1396f49b-d4cd-4883-84c6-2fcf0d3a602f": {
+			"id": "1396f49b-d4cd-4883-84c6-2fcf0d3a602f",
 			"visible": true,
-			"name": "targeta_usuarix",
+			"name": "album_canco",
 			"desc": "",
 			"type": "identifying",
-			"parent_key": "687caf12-6a79-4752-8ed5-6dce8d990197",
-			"parent": "a6312367-705d-4a47-b9bc-ab49e276bc6d",
-			"child": "63161e56-4fe1-4a96-a5e9-a6b10015f4db",
+			"parent_key": "16b5a4ec-d3a8-4f17-bc58-af9b57960160",
+			"parent": "7921f722-c86d-451e-9df3-60900ad0e8c8",
+			"child": "c0d59855-2e81-452a-bb63-5010a81ffbcd",
 			"c_mp": "true",
 			"c_mch": "true",
-			"c_p": "many",
-			"c_ch": "one",
+			"c_p": "one",
+			"c_ch": "many",
 			"c_cp": "",
 			"c_cch": "",
 			"cols": [
 				{
-					"id": "ec5c665e-3d03-4901-b237-8d5bb33f7287",
-					"parentcol": "db195b1b-ee01-4472-92e5-8ed95913e7b6",
-					"childcol": "d985668a-6bb8-4237-a562-c8141d662dfc"
+					"id": "f931ef3e-d12a-4638-b8d0-087a6866ef20",
+					"parentcol": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005",
+					"childcol": "4d5fcc93-9d25-4be1-9df9-b7a7d9f2668e"
 				}
 			],
 			"generate": true,
 			"generateCustomCode": true
 		},
-		"d8755ea0-e6d3-473c-a5ce-fc88a65f5102": {
-			"id": "d8755ea0-e6d3-473c-a5ce-fc88a65f5102",
+		"308eab94-8442-4f46-ba81-59251464ec36": {
+			"id": "308eab94-8442-4f46-ba81-59251464ec36",
 			"visible": true,
-			"name": "pagaments_usuarix",
+			"name": "playlist_canco",
 			"desc": "",
 			"type": "identifying",
-			"parent_key": "46c55d51-bcc5-441c-ba3b-33fc3de8e0ee",
-			"parent": "947e0537-afc1-4ce5-9b4b-3ab2efa52990",
-			"child": "63161e56-4fe1-4a96-a5e9-a6b10015f4db",
+			"parent_key": "811b2473-cdd7-4320-b8c5-588085d2b452",
+			"parent": "1cdf4d79-97de-4b32-b04d-c72434bcd271",
+			"child": "c0d59855-2e81-452a-bb63-5010a81ffbcd",
 			"c_mp": "true",
 			"c_mch": "true",
-			"c_p": "many",
-			"c_ch": "one",
+			"c_p": "one",
+			"c_ch": "many",
 			"c_cp": "",
 			"c_cch": "",
 			"cols": [
 				{
-					"id": "9bbce548-b3de-41e5-95af-c30449037c86",
-					"parentcol": "5a078ee4-e6f5-4893-8fe3-c19cf722e691",
-					"childcol": "05259bb6-8902-48a1-9381-c9b1105c0e17"
+					"id": "25f53f7d-7207-4ff7-bd9b-01324bea9186",
+					"parentcol": "5d63dfc1-c53d-4fea-a9cd-17273a70504c",
+					"childcol": "bba3f62b-da8d-44e1-ab1d-595fc5e6d23c"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"75f451ed-9133-495c-9037-2370a6df2556": {
+			"id": "75f451ed-9133-495c-9037-2370a6df2556",
+			"visible": true,
+			"name": "playlist_album",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "811b2473-cdd7-4320-b8c5-588085d2b452",
+			"parent": "1cdf4d79-97de-4b32-b04d-c72434bcd271",
+			"child": "7921f722-c86d-451e-9df3-60900ad0e8c8",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "5550cf85-83ca-49af-ad5e-701bc58aa5c4",
+					"parentcol": "5d63dfc1-c53d-4fea-a9cd-17273a70504c",
+					"childcol": "6ecb55a9-2ace-44df-802a-d75bcdedd839"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"2678bb2a-bf9d-4c44-86d7-54c5659f17f2": {
+			"id": "2678bb2a-bf9d-4c44-86d7-54c5659f17f2",
+			"visible": true,
+			"name": "playlist_artista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "811b2473-cdd7-4320-b8c5-588085d2b452",
+			"parent": "1cdf4d79-97de-4b32-b04d-c72434bcd271",
+			"child": "5980d630-c02c-49c2-acca-6b061e3a66fb",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "42967e62-ad6c-4775-9162-b5d7c204c510",
+					"parentcol": "5d63dfc1-c53d-4fea-a9cd-17273a70504c",
+					"childcol": "4c6df043-2a35-4b13-bd9c-c66a0ad94ed3"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"a72f5270-bc55-476c-8596-4ddc3f43c5a5": {
+			"id": "a72f5270-bc55-476c-8596-4ddc3f43c5a5",
+			"visible": true,
+			"name": "artista_artista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "77b202ef-23df-4701-a6bd-90fc95804995",
+			"parent": "5980d630-c02c-49c2-acca-6b061e3a66fb",
+			"child": "5980d630-c02c-49c2-acca-6b061e3a66fb",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "82be50e6-7666-45a3-a80b-84612f25d600",
+					"parentcol": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005",
+					"childcol": "e4d3d6e2-c0de-40a7-b2e9-4f68e783f990"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"14d73bd2-39c9-4ccc-935b-3ccfd9332da0": {
+			"id": "14d73bd2-39c9-4ccc-935b-3ccfd9332da0",
+			"visible": true,
+			"name": "usuarix_playlist",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "10436e11-c6b4-4fe2-8f44-5d12a781cf5f",
+			"parent": "63161e56-4fe1-4a96-a5e9-a6b10015f4db",
+			"child": "1cdf4d79-97de-4b32-b04d-c72434bcd271",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "many",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "0ba6ee9f-201a-4a44-b59d-a9b0ea4934fb",
+					"parentcol": "2a9541d6-04fe-43ce-8c18-0477da698ee4",
+					"childcol": "8f3b2e36-ef6a-42e9-9667-cbb960c1a02b"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"5fef4e3a-8d75-4122-a8eb-10f8101f6dba": {
+			"id": "5fef4e3a-8d75-4122-a8eb-10f8101f6dba",
+			"visible": true,
+			"name": "usuarix_favorits",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "10436e11-c6b4-4fe2-8f44-5d12a781cf5f",
+			"parent": "63161e56-4fe1-4a96-a5e9-a6b10015f4db",
+			"child": "f9339283-e90d-4c0d-b4ed-595395787f85",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "798daee4-7a70-42d3-a6a8-67a3355ae476",
+					"parentcol": "2a9541d6-04fe-43ce-8c18-0477da698ee4",
+					"childcol": "16e241b6-702c-4ebc-acac-656c69e823e8"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"defadefb-aa5c-460f-afce-65d27cfe9cb0": {
+			"id": "defadefb-aa5c-460f-afce-65d27cfe9cb0",
+			"visible": true,
+			"name": "artista_favorits",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "77b202ef-23df-4701-a6bd-90fc95804995",
+			"parent": "5980d630-c02c-49c2-acca-6b061e3a66fb",
+			"child": "f9339283-e90d-4c0d-b4ed-595395787f85",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "many",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "5a92a813-f758-4aed-8762-9cb5d64f191e",
+					"parentcol": "b3499c4d-1b7d-4102-ab1c-b3c77ba51005",
+					"childcol": "12d87b7a-5a05-4bc9-9152-029e125d7f92"
 				}
 			],
 			"generate": true,
@@ -1251,7 +1391,7 @@
 		"def_validationAction": "na",
 		"def_collation": "",
 		"def_others": "",
-		"lastSaved": "Sun Nov 20 2022 22:21:35 GMT+0100 (hora estándar de Europa central)"
+		"lastSaved": "Wed Nov 23 2022 09:39:33 GMT+0100 (hora estándar de Europa central)"
 	},
 	"otherObjects": {},
 	"diagrams": {
@@ -1260,7 +1400,7 @@
 			"description": "",
 			"id": "ad37cb30-b53f-4340-923e-149975f1bb77",
 			"keysgraphics": true,
-			"linegraphics": "detailed",
+			"linegraphics": "basic",
 			"zoom": 1,
 			"background": "transparent",
 			"lineColor": "transparent",
@@ -1269,21 +1409,10 @@
 			"diagramItems": {
 				"63161e56-4fe1-4a96-a5e9-a6b10015f4db": {
 					"referencedItemId": "63161e56-4fe1-4a96-a5e9-a6b10015f4db",
-					"x": 469,
-					"y": 65,
-					"gHeight": 243,
-					"gWidth": 211,
-					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": false,
-					"autoExpand": true
-				},
-				"482bb142-c424-42a5-9d6d-ed2727eedc9c": {
-					"referencedItemId": "482bb142-c424-42a5-9d6d-ed2727eedc9c",
-					"x": 884,
-					"y": 77,
-					"gHeight": 99,
-					"gWidth": 222,
+					"x": 69,
+					"y": 151,
+					"gHeight": 477,
+					"gWidth": 288,
 					"color": "#ffffff",
 					"background": "#03a9f4",
 					"resized": false,
@@ -1291,65 +1420,10 @@
 				},
 				"1cdf4d79-97de-4b32-b04d-c72434bcd271": {
 					"referencedItemId": "1cdf4d79-97de-4b32-b04d-c72434bcd271",
-					"x": 45,
-					"y": 388,
-					"gHeight": 135,
-					"gWidth": 244,
-					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": false,
-					"autoExpand": true
-				},
-				"a6312367-705d-4a47-b9bc-ab49e276bc6d": {
-					"referencedItemId": "a6312367-705d-4a47-b9bc-ab49e276bc6d",
-					"x": 885,
-					"y": 186,
-					"gHeight": 117,
-					"gWidth": 205,
-					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": false,
-					"autoExpand": true
-				},
-				"7f44d17a-1ebb-4e49-bc6e-c9b9d12dcc64": {
-					"referencedItemId": "7f44d17a-1ebb-4e49-bc6e-c9b9d12dcc64",
-					"x": 371,
-					"y": 626,
-					"gHeight": 81,
-					"gWidth": 244,
-					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": false,
-					"autoExpand": true
-				},
-				"97f8a67d-cfa0-4594-86d3-41e6bcbd387a": {
-					"referencedItemId": "97f8a67d-cfa0-4594-86d3-41e6bcbd387a",
-					"x": 637,
-					"y": 422,
-					"gHeight": 63,
-					"gWidth": 196,
-					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": false,
-					"autoExpand": true
-				},
-				"947e0537-afc1-4ce5-9b4b-3ab2efa52990": {
-					"referencedItemId": "947e0537-afc1-4ce5-9b4b-3ab2efa52990",
-					"x": 886,
-					"y": 321,
-					"gHeight": 81,
-					"gWidth": 221,
-					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": false,
-					"autoExpand": true
-				},
-				"8f20a639-e9ad-4193-a346-179774d79e2e": {
-					"referencedItemId": "8f20a639-e9ad-4193-a346-179774d79e2e",
-					"x": 698,
-					"y": 488,
-					"gHeight": 81,
-					"gWidth": 200,
+					"x": 436,
+					"y": 232,
+					"gHeight": 261,
+					"gWidth": 270,
 					"color": "#ffffff",
 					"background": "#03a9f4",
 					"resized": false,
@@ -1357,54 +1431,98 @@
 				},
 				"5980d630-c02c-49c2-acca-6b061e3a66fb": {
 					"referencedItemId": "5980d630-c02c-49c2-acca-6b061e3a66fb",
-					"x": 370,
-					"y": 737,
-					"gHeight": 81,
-					"gWidth": 194,
+					"x": 931,
+					"y": 30,
+					"gHeight": 134,
+					"gWidth": 209,
 					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": false,
-					"autoExpand": true
-				},
-				"83d29f88-f08a-475b-92e5-4884127bbf1c": {
-					"referencedItemId": "83d29f88-f08a-475b-92e5-4884127bbf1c",
-					"x": 103,
-					"y": 811,
-					"gHeight": 63,
-					"gWidth": 249,
-					"color": "#ffffff",
-					"background": "#03a9f4",
+					"background": "#8bc34a",
 					"resized": false,
 					"autoExpand": true
 				},
 				"7921f722-c86d-451e-9df3-60900ad0e8c8": {
 					"referencedItemId": "7921f722-c86d-451e-9df3-60900ad0e8c8",
-					"x": 707,
-					"y": 629,
-					"gHeight": 99,
+					"x": 928,
+					"y": 286,
+					"gHeight": 134,
 					"gWidth": 206,
 					"color": "#ffffff",
-					"background": "#03a9f4",
-					"resized": false,
-					"autoExpand": true
-				},
-				"56131caf-4dd3-4e7f-bf92-95c483424338": {
-					"referencedItemId": "56131caf-4dd3-4e7f-bf92-95c483424338",
-					"x": 308,
-					"y": 347,
-					"gHeight": 63,
-					"gWidth": 260,
-					"color": "#ffffff",
-					"background": "#03a9f4",
+					"background": "#8bc34a",
 					"resized": false,
 					"autoExpand": true
 				},
 				"c0d59855-2e81-452a-bb63-5010a81ffbcd": {
 					"referencedItemId": "c0d59855-2e81-452a-bb63-5010a81ffbcd",
-					"x": 329,
-					"y": 428,
-					"gHeight": 99,
+					"x": 921,
+					"y": 499,
+					"gHeight": 134,
 					"gWidth": 218,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"e2afff7b-0f71-4f66-b6ae-8c7f7495e698": {
+					"referencedItemId": "e2afff7b-0f71-4f66-b6ae-8c7f7495e698",
+					"x": 1600,
+					"y": 40,
+					"gHeight": 60,
+					"gWidth": 160,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"f5e6df51-32de-4f2a-8410-3551062ee7cb": {
+					"referencedItemId": "f5e6df51-32de-4f2a-8410-3551062ee7cb",
+					"x": 1600,
+					"y": 40,
+					"gHeight": 60,
+					"gWidth": 160,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"e7e168b3-ca1e-4b21-8cd2-04f9627db3a7": {
+					"referencedItemId": "e7e168b3-ca1e-4b21-8cd2-04f9627db3a7",
+					"x": 1200,
+					"y": 40,
+					"gHeight": 60,
+					"gWidth": 160,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"2c395e45-029e-4a27-a0ef-02c2c6f2330f": {
+					"referencedItemId": "2c395e45-029e-4a27-a0ef-02c2c6f2330f",
+					"x": 1000,
+					"y": 40,
+					"gHeight": 60,
+					"gWidth": 160,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"61a455d1-d631-4616-8992-60063adda54f": {
+					"referencedItemId": "61a455d1-d631-4616-8992-60063adda54f",
+					"x": 1000,
+					"y": 40,
+					"gHeight": 60,
+					"gWidth": 160,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"f9339283-e90d-4c0d-b4ed-595395787f85": {
+					"referencedItemId": "f9339283-e90d-4c0d-b4ed-595395787f85",
+					"x": 409,
+					"y": 53,
+					"gHeight": 81,
+					"gWidth": 200,
 					"color": "#ffffff",
 					"background": "#03a9f4",
 					"resized": false,

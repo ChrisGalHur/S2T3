@@ -1,0 +1,199 @@
+db.createCollection('comentari', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'comentari',
+      required: ['comentari_id', 'text', 'data_hora', 'usuarix', 'video'],
+      properties: {
+        comentari_id: {
+          bsonType: 'objectId'
+        },
+        text: {
+          bsonType: 'string'
+        },
+        data_hora: {
+          bsonType: 'timestamp'
+        },
+        usuarix: {
+          bsonType: 'objectId'
+        },
+        video: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});
+db.createCollection('etiquetes', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'etiquetes',
+      required: ['etiquetes_id', 'video', 'usuarix'],
+      properties: {
+        etiquetes_id: {
+          bsonType: 'objectId'
+        },
+        video: {
+          bsonType: 'objectId'
+        },
+        usuarix: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('playlist', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'playlist',
+      required: ['playlist_id', 'usuarix', 'nom', 'data_creacio', 'estat', 'video_id'],
+      properties: {
+        playlist_id: {
+          bsonType: 'objectId'
+        },
+        usuarix: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        data_creacio: {
+          bsonType: 'date'
+        },
+        estat: {
+          bsonType: 'bool'
+        },
+        video_id: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});
+db.createCollection('usuarix', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'usuarix',
+      required: ['usuarix_id', 'email', 'password', 'nom', 'data_naixement', 'sexe', 'pais', 'codi_postal'],
+      properties: {
+        usuarix_id: {
+          bsonType: 'objectId'
+        },
+        email: {
+          bsonType: 'string'
+        },
+        password: {
+          bsonType: 'string'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        data_naixement: {
+          bsonType: 'date'
+        },
+        sexe: {
+          enum:
+        },
+        pais: {
+          enum:
+        },
+        codi_postal: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('canal', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'canal',
+      required: ['canal_id', 'usuarix', 'nom', 'descripcio', 'data_creacio'],
+      properties: {
+        canal_id: {
+          bsonType: 'objectId'
+        },
+        usuarix: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        descripcio: {
+          bsonType: 'string'
+        },
+        data_creacio: {
+          bsonType: 'date'
+        }
+      }
+    }
+  }
+});
+db.createCollection('video', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'video',
+      required: ['video_id', 'usuarix', 'canal', 'playlist', 'titol', 'descripcio', 'grandaria', 'nom_arxiu', 'durada', 'thumbnail', 'reproduccions', 'estat', 'data_hora_creacio', 'likes_dislikes'],
+      properties: {
+        video_id: {
+          bsonType: 'objectId'
+        },
+        usuarix: {
+          bsonType: 'objectId'
+        },
+        canal: {
+          bsonType: 'objectId'
+        },
+        playlist: {
+          bsonType: 'objectId'
+        },
+        titol: {
+          bsonType: 'string'
+        },
+        descripcio: {
+          bsonType: 'string'
+        },
+        grandaria: {
+          bsonType: 'timestamp'
+        },
+        nom_arxiu: {
+          bsonType: 'string'
+        },
+        durada: {
+          bsonType: 'timestamp'
+        },
+        thumbnail: {
+          bsonType: 'string'
+        },
+        reproduccions: {
+          bsonType: 'int'
+        },
+        estat: {
+          enum:
+        },
+        data_hora_creacio: {
+          bsonType: 'date'
+        },
+        likes_dislikes: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['tipus'],
+          properties: {
+            tipus: {
+              enum:
+            }
+          }
+        }
+      }
+    }
+  }
+});

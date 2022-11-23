@@ -1,20 +1,12 @@
-
-db.createCollection( 'proveidor', {validator: {$jsonSchema: {bsonType: 'object',title:'proveidor',required: [         'id_proveidor',          'ulleres',          'nom',          'direcció',          'telefo
 db.createCollection('proveidor', {
   validator: {
     $jsonSchema: {
       bsonType: 'object',
       title: 'proveidor',
-      required: ['id_proveidor', 'ulleres', 'nom', 'direcció', 'telefon', 'nif'],
+      required: ['id_proveidor', 'nom', 'direcció', 'telefon', 'nif', 'ulleres'],
       properties: {
         id_proveidor: {
           bsonType: 'objectId'
-        },
-        ulleres: {
-          bsonType: 'array',
-          items: {
-            bsonType: 'objectId'
-          }
         },
         nom: {
           bsonType: 'string'
@@ -30,90 +22,54 @@ db.createCollection('proveidor', {
         },
         nif: {
           bsonType: 'int'
-        }
-      }
-    }
-  }
-});
-db.createCollection('ulleres', {
-  validator: {
-    $jsonSchema: {
-      bsonType: 'object',
-      title: 'ulleres',
-      required: ['ulleres_id', 'ventas', 'marca', 'graduacioR', 'graduacioL', 'muntura', 'color', 'color_vidreR', 'color_vidreL', 'preu'],
-      properties: {
-        ulleres_id: {
-          bsonType: 'objectId'
         },
-        ventas: {
-          bsonType: 'array',
-          items: {
-            bsonType: 'objectId'
+        ulleres: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['ulleres_id', 'marca', 'gradiacioR', 'graduacioL', 'muntura', 'color', 'color_vidreR', 'color_vidreL', 'preu'],
+          properties: {
+            ulleres_id: {
+              bsonType: 'objectId'
+            },
+            marca: {
+              bsonType: 'regex'
+            },
+            gradiacioR: {
+              bsonType: 'decimal'
+            },
+            graduacioL: {
+              bsonType: 'decimal'
+            },
+            muntura: {
+              enum:
+            },
+            color: {
+              enum:
+            },
+            color_vidreR: {
+              enum:
+            },
+            color_vidreL: {
+              enum:
+            },
+            preu: {
+              bsonType: 'double'
+            }
           }
-        },
-        marca: {
-          bsonType: 'string'
-        },
-        graduacioR: {
-          bsonType: 'double'
-        },
-        graduacioL: {
-          bsonType: 'double'
-        },
-        muntura: {
-          enum:
-        },
-        color: {
-          bsonType: 'string'
-        },
-        color_vidreR: {
-          bsonType: 'string'
-        },
-        color_vidreL: {
-          bsonType: 'string'
-        },
-        preu: {
-          bsonType: 'double'
         }
       }
     }
   }
 });
-db.createCollection('ventas', {
+db.createCollection('clientes', {
   validator: {
     $jsonSchema: {
       bsonType: 'object',
-      title: 'ventas',
-      required: ['ventas_id', 'fecha', 'client'],
+      title: 'clientes',
+      required: ['clientes_id', 'nom', 'codi_postal', 'telefon', 'data_registre'],
       properties: {
-        ventas_id: {
+        clientes_id: {
           bsonType: 'objectId'
-        },
-        fecha: {
-          bsonType: 'date'
-        },
-        client: {
-          bsonType: 'string'
-        }
-      }
-    }
-  }
-});
-db.createCollection('client', {
-  validator: {
-    $jsonSchema: {
-      bsonType: 'object',
-      title: 'client',
-      required: ['client_id', 'ventas', 'nom', 'codi_postal', 'telefon', 'correu', 'data_registre', 'recomenacio'],
-      properties: {
-        client_id: {
-          bsonType: 'objectId'
-        },
-        ventas: {
-          bsonType: 'array',
-          items: {
-            bsonType: 'objectId'
-          }
         },
         nom: {
           bsonType: 'string'
@@ -124,43 +80,53 @@ db.createCollection('client', {
         telefon: {
           bsonType: 'int'
         },
-        correu: {
-          bsonType: 'string'
-        },
         data_registre: {
           bsonType: 'date'
         },
-        recomenacio: {
-          bsonType: 'string'
+        clientes_recomenacio: {
+          bsonType: 'objectId'
         }
       }
     }
   }
 });
-db.createCollection('empleats', {
+db.createCollection('ventas', {
   validator: {
     $jsonSchema: {
       bsonType: 'object',
-      title: 'empleats',
-      required: ['empleats_id', 'ventas'],
+      title: 'ventas',
+      required: ['ventas_id', 'empleats', 'proveidor', 'clientes', 'fecha'],
       properties: {
-        empleats_id: {
+        ventas_id: {
           bsonType: 'objectId'
         },
-        ventas: {
-          bsonType: 'array',
-          items: {
-            bsonType: 'objectId'
+        empleats: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['empleats_id', 'nom', 'cognom1', 'cognom2'],
+          properties: {
+            empleats_id: {
+              bsonType: 'objectId'
+            },
+            nom: {
+              bsonType: 'string'
+            },
+            cognom1: {
+              bsonType: 'string'
+            },
+            cognom2: {
+              bsonType: 'string'
+            }
           }
         },
-        nom: {
-          bsonType: 'string'
+        proveidor: {
+          bsonType: 'objectId'
         },
-        cognom1: {
-          bsonType: 'string'
+        clientes: {
+          bsonType: 'objectId'
         },
-        cognom2: {
-          bsonType: 'string'
+        fecha: {
+          bsonType: 'date'
         }
       }
     }

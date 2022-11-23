@@ -1,0 +1,266 @@
+db.createCollection('usuarix', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'usuarix',
+      required: ['usuarix_id', 'email', 'password', 'nom', 'naixement', 'sexe', 'pais', 'codi_postal'],
+      properties: {
+        usuarix_id: {
+          bsonType: 'objectId'
+        },
+        subscripcio: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['subscripcio_id', 'data_inici', 'data_renovacio'],
+          properties: {
+            subscripcio_id: {
+              bsonType: 'objectId'
+            },
+            data_inici: {
+              bsonType: 'date'
+            },
+            data_renovacio: {
+              bsonType: 'date'
+            }
+          }
+        },
+        email: {
+          bsonType: 'string'
+        },
+        password: {
+          bsonType: 'string'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        naixement: {
+          bsonType: 'date'
+        },
+        sexe: {
+          enum:
+        },
+        pais: {
+          bsonType: 'string'
+        },
+        codi_postal: {
+          bsonType: 'int'
+        },
+        pagaments: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['pagaments_id', 'data', 'total'],
+          properties: {
+            pagaments_id: {
+              bsonType: 'objectId'
+            },
+            data: {
+              bsonType: 'date'
+            },
+            total: {
+              bsonType: 'double'
+            }
+          }
+        },
+        targeta: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['targeta_id', 'numero_targeta', 'any_caducitat', 'mes_caducitat', 'codi_seguretat'],
+          properties: {
+            targeta_id: {
+              bsonType: 'objectId'
+            },
+            numero_targeta: {
+              bsonType: 'int'
+            },
+            any_caducitat: {
+              bsonType: 'int'
+            },
+            mes_caducitat: {
+              bsonType: 'int'
+            },
+            codi_seguretat: {
+              bsonType: 'int'
+            }
+          }
+        },
+        paypal: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['paypal_id', 'nom_paypal'],
+          properties: {
+            paypal_id: {
+              bsonType: 'objectId'
+            },
+            nom_paypal: {
+              bsonType: 'string'
+            }
+          }
+        }
+      }
+    }
+  }
+});
+db.createCollection('playlist', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'playlist',
+      required: ['playlist_id', 'usuarix', 'titol', 'quantitat', 'data_creada'],
+      properties: {
+        playlist_id: {
+          bsonType: 'objectId'
+        },
+        usuarix: {
+          bsonType: 'objectId'
+        },
+        titol: {
+          bsonType: 'string'
+        },
+        quantitat: {
+          bsonType: 'int'
+        },
+        data_creada: {
+          bsonType: 'timestamp'
+        },
+        eliminada: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['estat', 'data_eliminacio'],
+          properties: {
+            estat: {
+              bsonType: 'bool'
+            },
+            data_eliminacio: {
+              bsonType: 'date'
+            }
+          }
+        },
+        canco_afegida: {
+          bsonType: 'string'
+        },
+        data_afegiment_canco: {
+          bsonType: 'string'
+        },
+        artistes_seguiment: {
+          bsonType: 'string'
+        },
+        favorit_canco: {
+          bsonType: 'string'
+        },
+        favorit_artista: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('artista', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'artista',
+      required: ['artista_id', 'nom', 'imatge', 'tipus_musica', 'playlist', 'artista'],
+      properties: {
+        artista_id: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        imatge: {
+          bsonType: 'string'
+        },
+        tipus_musica: {
+          bsonType: 'array',
+          items: {
+            bsonType: 'string'
+          }
+        },
+        playlist: {
+          bsonType: 'objectId'
+        },
+        artista: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});
+db.createCollection('album', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'album',
+      required: ['artista', 'album_id', 'titol', 'any_publicacio', 'portada', 'playlist'],
+      properties: {
+        artista: {
+          bsonType: 'objectId'
+        },
+        album_id: {
+          bsonType: 'objectId'
+        },
+        titol: {
+          bsonType: 'string'
+        },
+        any_publicacio: {
+          bsonType: 'date'
+        },
+        portada: {
+          bsonType: 'string'
+        },
+        playlist: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});
+db.createCollection('canco', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'canco',
+      required: ['canco_id', 'album', 'titol', 'durada', 'reproduccions', 'playlist'],
+      properties: {
+        canco_id: {
+          bsonType: 'objectId'
+        },
+        album: {
+          bsonType: 'objectId'
+        },
+        titol: {
+          bsonType: 'string'
+        },
+        durada: {
+          bsonType: 'timestamp'
+        },
+        reproduccions: {
+          bsonType: 'double'
+        },
+        playlist: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});
+db.createCollection('favorits', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'favorits',
+      required: ['favorits_id', 'usuarix', 'artista'],
+      properties: {
+        favorits_id: {
+          bsonType: 'objectId'
+        },
+        usuarix: {
+          bsonType: 'objectId'
+        },
+        artista: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});

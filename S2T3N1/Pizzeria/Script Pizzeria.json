@@ -1,0 +1,220 @@
+db.createCollection('client', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'client',
+      required: ['client_id', 'nom', 'cognoms', 'direccio', 'telefon', 'provincia'],
+      properties: {
+        client_id: {
+          bsonType: 'objectId'
+        },
+        nom: {
+          bsonType: 'string'
+        },
+        cognoms: {
+          bsonType: 'string'
+        },
+        direccio: {
+          bsonType: 'string'
+        },
+        telefon: {
+          bsonType: 'int'
+        },
+        provincia: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['provincia_id', 'nom', 'localitat'],
+          properties: {
+            provincia_id: {
+              bsonType: 'objectId'
+            },
+            nom: {
+              bsonType: 'string'
+            },
+            localitat: {
+              bsonType: 'object',
+              title: 'object',
+              required: ['localitat_id', 'nom'],
+              properties: {
+                localitat_id: {
+                  bsonType: 'objectId'
+                },
+                nom: {
+                  bsonType: 'string'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+});
+db.createCollection('comanda', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'comanda',
+      required: ['comanda_id', 'botiga', 'client', 'datahora', 'tipus', 'cantpizza', 'canthamburguesa', 'cantbeguda'],
+      properties: {
+        comanda_id: {
+          bsonType: 'objectId'
+        },
+        botiga: {
+          bsonType: 'objectId'
+        },
+        client: {
+          bsonType: 'objectId'
+        },
+        datahora: {
+          bsonType: 'date'
+        },
+        tipus: {
+          enum:
+        },
+        cantpizza: {
+          bsonType: 'int'
+        },
+        canthamburguesa: {
+          bsonType: 'int'
+        },
+        cantbeguda: {
+          bsonType: 'int'
+        },
+        pizza: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['pizza_id', 'nom', 'descripcio', 'imatge', 'preu', 'categoria', 'cuantitat'],
+          properties: {
+            pizza_id: {
+              bsonType: 'objectId'
+            },
+            nom: {
+              bsonType: 'string'
+            },
+            descripcio: {
+              bsonType: 'string'
+            },
+            imatge: {
+              bsonType: 'string'
+            },
+            preu: {
+              bsonType: 'double'
+            },
+            categoria: {
+              bsonType: 'object',
+              title: 'object',
+              required: ['categoria_id', 'nom'],
+              properties: {
+                categoria_id: {
+                  bsonType: 'objectId'
+                },
+                nom: {
+                  bsonType: 'string'
+                }
+              }
+            },
+            cuantitat: {
+              bsonType: 'int'
+            }
+          }
+        },
+        beguda: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['beguda_id', 'nom', 'descripcio', 'imatge', 'preu', 'cuantitat'],
+          properties: {
+            beguda_id: {
+              bsonType: 'objectId'
+            },
+            nom: {
+              bsonType: 'string'
+            },
+            descripcio: {
+              bsonType: 'string'
+            },
+            imatge: {
+              bsonType: 'string'
+            },
+            preu: {
+              bsonType: 'double'
+            },
+            cuantitat: {
+              bsonType: 'int'
+            }
+          }
+        },
+        hamburguesa: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['hamburguesa_id', 'nom', 'descripcio', 'imatge', 'preu', 'cuantitat'],
+          properties: {
+            hamburguesa_id: {
+              bsonType: 'objectId'
+            },
+            nom: {
+              bsonType: 'string'
+            },
+            descripcio: {
+              bsonType: 'string'
+            },
+            imatge: {
+              bsonType: 'string'
+            },
+            preu: {
+              bsonType: 'double'
+            },
+            cuantitat: {
+              bsonType: 'int'
+            }
+          }
+        }
+      }
+    }
+  }
+});
+db.createCollection('botiga', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'botiga',
+      required: ['botiga_id', 'direccio', 'codi_postal', 'empleat'],
+      properties: {
+        botiga_id: {
+          bsonType: 'objectId'
+        },
+        direccio: {
+          bsonType: 'string'
+        },
+        codi_postal: {
+          bsonType: 'int'
+        },
+        empleat: {
+          bsonType: 'object',
+          title: 'object',
+          required: ['empleat_id', 'nom', 'cognoms', 'nif', 'telefon', 'puesto'],
+          properties: {
+            empleat_id: {
+              bsonType: 'objectId'
+            },
+            nom: {
+              bsonType: 'string'
+            },
+            cognoms: {
+              bsonType: 'string'
+            },
+            nif: {
+              bsonType: 'string'
+            },
+            telefon: {
+              bsonType: 'int'
+            },
+            puesto: {
+              enum:
+            }
+          }
+        }
+      }
+    }
+  }
+});
